@@ -17,9 +17,6 @@ const server = express();
 server.set('views',path.join(__dirname, 'views'));
 server.set('view engine',"ejs")
 
-// server.use("/public",express.static(path.join(__dirname, "public")))
-
-
 server.use("/", root_router);
 
 https.createServer(httpsOptions, server).listen(HTTPS_PORT, () => console.log(`HTTPS Server running on port ${HTTPS_PORT}`));

@@ -7,7 +7,7 @@ $(function () {
 
 		$h1.text("Loading...");
 		var request = $.ajax({
-			url: "/" + zipCode,
+			url: "/json-data/" + zipCode,
 			dataType: "json"
 		});
 		request.done(function (data) {
