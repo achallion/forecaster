@@ -6,6 +6,6 @@ const root_router = express.Router();
 
 root_router.use(morgan('tiny'));
 
-// root_router.use("/view", view_router)
+root_router.use("/view", view_router)
 
 module.exports = root_router;

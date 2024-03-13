@@ -9,10 +9,13 @@ let httpsOptions = {
 	cert: fs.readFileSync(path.join(__dirname, "request.pem"))
 }
 
-const server = express();
-
 const HTTP_PORT = process.env.HTTP_PORT | 3001;
 const HTTPS_PORT = process.env.HTTPS_PORT | 4001;
+
+const server = express();
+
+server.set('views',path.join(__dirname, 'views'));
+server.set('view engine',"ejs")
 
 server.use("/", root_router);
 
